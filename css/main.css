@@ -15,17 +15,16 @@ a {
 
 /* Header */
 header {
-  background-color: royalblue;
+  background-color: #f6f5f0;
+  border-bottom: 1px solid #c8c8c8;
 }
 header .inner {
   width: 1100px;
   height: 120px;
   margin: 0 auto;
-  background-color: orange;
   position: relative;
 }
 header .logo {
-  display: none;
   height: 75px;
   position: absolute;
   top: 0;
@@ -35,7 +34,10 @@ header .logo {
 }
 
 header .sub-menu {
+  position: absolute;
   display: flex; 
+  top: 10px;
+  right: 0;
 }
 header .sub-menu ul.menu {
   font-family: Arial, Helvetica, sans-serif;
@@ -82,7 +84,7 @@ header .sub-menu .search input {
   outline: none;
   background-color: #fff;
   color: #777;
-  transition: width .3s;
+  transition: width .5s;
   font-size: 12px;
 }
 header .sub-menu .search input:focus {
@@ -96,4 +98,9 @@ header .sub-menu .search .material-icons {
   bottom: 0;
   right: 5px;
   margin: auto;
+  transition: .5s;
+}
+
+header .sub-menu .search.focused .material-icons {
+  opacity: 0;
 }

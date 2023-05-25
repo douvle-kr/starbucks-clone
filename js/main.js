@@ -54,9 +54,9 @@ new Swiper('.promotion .swiper', {
   spaceBetween: 10,
   centeredSlides: true,
   loop: true,
-  // autoplay: {
-  //   delay: 5000
-  // },
+  autoplay: {
+    delay: 5000
+  },
   pagination: {
     el: '.promotion .swiper-pagination',
     clickable: true
@@ -65,4 +65,12 @@ new Swiper('.promotion .swiper', {
     prevEl: '.promotion .swiper-prev',
     nextEl: '.promotion .swiper-next',
   }
+});
+
+
+const pormotionEl = document.querySelector('.promotion');
+const promotionToggleBtn = document.querySelector('.toggle-promotion');
+let isHidePromotion = false;
+promotionToggleBtn.addEventListener('click', function () {
+  isHidePromotion = !isHidePromotion;
 });
